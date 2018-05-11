@@ -5834,3 +5834,6 @@ button.close {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.navbar-brand img {
+  margin-top: -.5rem; }

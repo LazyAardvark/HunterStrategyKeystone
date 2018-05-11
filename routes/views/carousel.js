@@ -7,11 +7,11 @@ exports = module.exports = function (req, res) {
 
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
-	locals.section = 'home';
+	locals.section = 'carousel';
 
-	view.query('services', keystone.list('Service').model.find());
+	//load carousel
 	view.query('carousel', keystone.list('Carousel').model.find());
-	view.query('leadership', keystone.list('Leadership').model.find());
+
 	// Render the view
-	view.render('index');
+	view.render('carousel');
 };

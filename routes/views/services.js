@@ -9,6 +9,9 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'services';
 
+	//load Services
+	view.query('services', keystone.list('Service').model.find());
+
 	// Render the view
 	view.render('services');
 };
