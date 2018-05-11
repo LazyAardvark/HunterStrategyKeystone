@@ -2,22 +2,24 @@ var keystone  = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
-* Leadership Model
+* Staff Model
 * =============
 */
 
-var Leadership = new keystone.List('Leadership', {
+var Staff = new keystone.List('Staff', {
   map: {name : 'title'},
+  singular: "Staff",
+  plural: 'Staffers',
   autokey: {path: 'slug', from: 'title', unique: true},
 });
 
-Leadership.add({
+Staff.add({
   name: {
 		first: { type: String, wysiwyg: true, height: 20 },
 		last: { type: String, wysiwyg: true, height: 20 },
 	},
   title: {type: String, required: true},
-  corporate_title: {type: String, required: true},
+  corporate_title: {type: String},
   image: { type: Types.CloudinaryImage },
   contact: {
 		phone: { type:Types.Number},
@@ -25,4 +27,4 @@ Leadership.add({
 	},
 });
 
-Leadership.register();
+Staff.register();

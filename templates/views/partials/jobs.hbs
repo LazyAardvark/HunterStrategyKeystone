@@ -1,0 +1,19 @@
+{{!< default}}
+<div class="container">
+	<div class="jumbotron">
+		<h1>Job Offerings</h1>
+		<p>Lorem ipsum dolor sit amet et dolore magna, quis nostrud exercitation  pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+		<hr>
+	  <div class="row">
+	    <div class="col-md-12 cold-lg-12">
+	      <div class="row">
+	        {{# each jobs}}
+	        <div class="col-md-4 col-lg-4">
+						{{> job this}}
+	        </div>
+	        {{/each}}
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>

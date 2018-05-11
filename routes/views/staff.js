@@ -9,11 +9,9 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
-	view.query('services', keystone.list('Service').model.find());
-	view.query('carousel', keystone.list('Carousel').model.find());
+	//load Staff & leadership
 	view.query('staff', keystone.list('Staff').model.find());
-	view.query('clients', keystone.list('Client').model.find());
-	view.query('partners', keystone.list('Partner').model.find());
+
 	// Render the view
-	view.render('index');
+	view.render('staff');
 };
