@@ -13,7 +13,7 @@ exports = module.exports = function (req, res) {
 	view.query('carousel', keystone.list('Carousel').model.find());
 	view.query('staff', keystone.list('Staff').model.find());
 	view.query('jobs', keystone.list('Job').model.find());
-	view.query('clients', keystone.list('Client').model.find());
+	view.query('customers', keystone.list('Customer').model.find());
 	view.query('partners', keystone.list('Partner').model.find());
 	// Render the view
 	view.render('index');

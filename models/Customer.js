@@ -2,22 +2,22 @@ var keystone  = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
-* Partner Model
+* Customer Model
 * =============
 */
 
-var Partner = new keystone.List('Partner', {
+var Customer = new keystone.List('Customer', {
   map: {name : 'title'},
-  singular: 'Partner',
-  plural: 'Partners',
+  singular: 'Customer',
+  plural: 'Customers',
   autokey: { path: 'slug', from: 'title', unique: true},
 });
 
-Partner.add({
+Customer.add({
   title: { type: String, required: true },
-  category: { type: Types.Relationship, ref: 'PostCategory', many: false, filters: {group: 'PartnerType'} },
+  category: { type: Types.Relationship, ref: 'PostCategory', many: false, filters:{ group: 'Customer' } },
   image: { type: Types.CloudinaryImage },
   website : {type: Types.Url},
 });
 
-Partner.register();
+Customer.register();

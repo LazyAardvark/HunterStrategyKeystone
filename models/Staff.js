@@ -7,23 +7,23 @@ var Types = keystone.Field.Types;
 */
 
 var Staff = new keystone.List('Staff', {
-  map: {name : 'title'},
+  map: {name : 'name'},
   singular: "Staff",
   plural: 'Staffers',
-  autokey: {path: 'slug', from: 'title', unique: true},
+  autokey: {path: 'slug', from: 'name', unique: true},
 });
 
 Staff.add({
-  name: {
-		first: { type: String, wysiwyg: true, height: 20 },
-		last: { type: String, wysiwyg: true, height: 20 },
-	},
-  title: {type: String, required: true},
-  corporate_title: {type: String},
+  name: {type: Types.Name, required: true	},
+  title: {type: String},
+  titleAbbreviated: {type: String},
   image: { type: Types.CloudinaryImage },
   contact: {
-		phone: { type:Types.Number},
 		email: { type: Types.Email, displayGravitar: false },
+    linkedIn:{ type: Types.Url},
+    twitter:{ type: Types.Url},
+    github:{ type: Types.Url},
+    medium:{ type: Types.Url},
 	},
 });
 

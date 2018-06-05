@@ -2,26 +2,25 @@ var keystone  = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
-* Service Model
+* Component Model
 * =============
 */
 
-var Service = new keystone.List('Service', {
+var Component = new keystone.List('Component', {
   map: {name : 'title'},
-  singular: 'Service',
-  plural: 'Services',
+  singular: 'Component',
+  plural: 'Components',
   autokey: { path: 'slug', from: 'title', unique: true},
 });
 
-Service.add({
+Component.add({
   title: { type: String, required: true },
   image: { type: Types.CloudinaryImage },
   content: {
 		short: { type: Types.Html, wysiwyg: true, height: 150 },
 		long: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
-  categories: { type: Types.Relationship, ref: 'PostCategory', many: true,  filters: {group: 'ServiceType' }},
-
+  category: { type: Types.Relationship, ref: 'PostCategory', many: false,  filters: {group: 'ServiceType' }},
 });
 
-Service.register();
+Component.register();
