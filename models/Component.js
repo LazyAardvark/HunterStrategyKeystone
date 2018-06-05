@@ -23,4 +23,6 @@ Component.add({
   category: { type: Types.Relationship, ref: 'PostCategory', many: false,  filters: {group: 'ServiceType' }},
 });
 
+Component.relationship({ ref: 'Component', path: 'components', refPath: 'components' });
+
 Component.register();

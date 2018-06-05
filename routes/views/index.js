@@ -10,6 +10,7 @@ exports = module.exports = function (req, res) {
 	locals.section = 'home';
 
 	view.query('services', keystone.list('Service').model.find());
+	view.query('components', keystone.list('Component').model.find());
 	view.query('carousel', keystone.list('Carousel').model.find());
 	view.query('staff', keystone.list('Staff').model.find());
 	view.query('jobs', keystone.list('Job').model.find());

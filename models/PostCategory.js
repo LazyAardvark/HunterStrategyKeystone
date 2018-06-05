@@ -18,7 +18,6 @@ PostCategory.relationship({ ref: 'Post', path: 'posts', refPath: 'categories' })
 PostCategory.relationship({ ref: 'Service', path: 'services', refPath: 'categories' });
 PostCategory.relationship({ ref: 'Customer', path: 'customers', refPath: 'categories' });
 PostCategory.relationship({ ref: 'Partner', path: 'partners', refPath: 'category' });
-PostCategory.relationship({ ref: 'Component', path: 'partners', refPath: 'category' });
-
+PostCategory.relationship({ ref: 'Component', path: 'components', refPath: 'category' });
 
 PostCategory.register();
