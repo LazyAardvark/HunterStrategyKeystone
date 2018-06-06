@@ -5837,3 +5837,15 @@ button.close {
 
 .navbar-brand img {
   margin-top: -.5rem; }
+
+.scroll-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; }
+  .scroll-menu .scroll-menu-item {
+    flex: 0 0 auto; }
+    .scroll-menu .scroll-menu-item .card {
+      width: 40rem;
+      margin: 12px;
+      padding: 6px;
+      border: grey solid 2px; }

@@ -12,6 +12,7 @@ exports = module.exports = function (req, res) {
 	//load Services
 	view.query('services', keystone.list('Service').model.find());
 
+	
 	// Render the view
 	view.render('services');
 };

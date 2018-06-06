@@ -2,8 +2,8 @@
   <div ><span></span></div>
   <p>{{{content.short}}}</p>
   <h4>Service Components</h4>
-  {{# each components}}
-    <div class="row">
+  <div class="scroll-menu">
+    {{# each components}}
       {{> component this}}
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
