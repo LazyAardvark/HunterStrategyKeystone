@@ -5845,7 +5845,15 @@ button.close {
   .scroll-menu .scroll-menu-item {
     flex: 0 0 auto; }
     .scroll-menu .scroll-menu-item .card {
-      width: 40rem;
-      margin: 12px;
-      padding: 6px;
-      border: grey solid 2px; }
+      width: 40rem; }
+
+.footer-container {
+  background-color: #eeeeee; }
+  .footer-container .footer-card {
+    text-align: center; }
+
+.card {
+  border: grey solid 2px;
+  text-align: center;
+  margin: 12px;
+  padding: 6px; }

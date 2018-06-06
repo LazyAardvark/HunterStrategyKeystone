@@ -35,9 +35,20 @@
 
     .card {
       width: 40rem;
-      margin: 12px;
-      padding: 6px;
-      border: grey solid 2px;
     }
   }
+}
+.footer-container{
+  background-color: #eeeeee;
+
+  .footer-card{
+    text-align: center;
+  }
+}
+
+.card{
+  border: grey solid 2px;
+  text-align: center;
+  margin: 12px;
+  padding: 6px;
 }
