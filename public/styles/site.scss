@@ -161,12 +161,12 @@ h1, h2, h3, h4 {
   background-image: url('../images/CreamTileBackground.jpg');
   .service-section {
     .service-descr .service-title{
-      color: $dark-blue;
+      color: $light-orange;
     }
     .components .background-image{
       background-color:$white;
       .card .card-body h3{
-        color: $light-orange;
+        color: $dark-blue;
       }
     }
   }
@@ -174,12 +174,12 @@ h1, h2, h3, h4 {
 .odd-service .service-section {
   flex-direction: row-reverse;
   .service-descr .service-title{
-    color: $light-orange;
+    color: $dark-blue;
   }
   .components .background-image{
     background-image: url('../images/CardTileBackground.jpg');
     .card .card-body h3{
-      color: $dark-blue;
+      color: $light-oranges;
     }
   }
 }
