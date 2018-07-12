@@ -1,9 +1,11 @@
-  <h3>{{{title}}}</h3>
-  <div ><span></span></div>
-  <p>{{{content.short}}}</p>
-  <h4>Service Components</h4>
-  <div class="scroll-menu">
+<div class="service-section container">
+  <div class="service-descr">
+    <h2 class="service-title">{{{title}}}</h2>
+    <p class="service-brief">{{{content.short}}}</p>
+  </div>
+  <div class="components">
     {{# each components}}
       {{> component this}}
     {{/each}}
   </div>
+</div>

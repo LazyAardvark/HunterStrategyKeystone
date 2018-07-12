@@ -21,8 +21,207 @@
 // Add your own site style includes here
 @import "site/layout";
 
-.navbar-brand img {
-  margin-top: -.5rem;
+//COLOR VARIABlES
+$light-orange: #d78a3e;
+$dark-orange: #d05527;
+$darker-orange: #c94b28;
+$light-blue: #005d83;
+$dark-blue: #034970;
+$light-green: #5b8244;
+$dark-green: #145753;
+$dark-grey: #5a5341;
+$white: #ffffff;
+
+// FONT STYLE DEFINTIONS
+ a, p, span, div, .standard-text{
+   font-family: co-headline, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+ }
+
+ .bold-text, .navbar-nav > li > span > a{
+   font-family: co-headline, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+
+ }
+
+h1, h2, h3, h4 {
+  font-family: montserrat, sans-serif;
+  font-style:normal;
+  font-weight: 700;
+
+  &.header-blue{
+    color: $dark-blue;
+  }
+  &.header-green{
+    color:$dark-green;
+  }
+  &.header-white{
+    color:$white;
+  }
+  &.header-orange{
+    color: $dark-orange;
+  }
+}
+
+// BASIC IMAGE DEFINTIONS
+.background-image{
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &.splash-page{
+    background-image: url('../images/SplashCodingBackgroundLight.jpg');
+  }
+
+}
+.inline-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  transform: scaleX(-1);
+  &.splash-graphic{
+    height: 450px;
+    width:500px;
+    background-image: url('../images/CloudServers.png');
+  }
+}
+
+//HUNTER NavBar
+.hunter-navbar{
+  background-color: $darker-orange;
+  background: linear-gradient(to right, rgba(208, 85, 39, 0.75), $darker-orange 10%, $darker-orange 90%, rgba(208, 85, 39, 0.75) );
+}
+
+.navbar-fixed-top {
+    min-height: 80px;
+}
+
+.navbar-nav > li > span > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+@media (max-width: 990px) {
+    .navbar-nav > li > span > a {
+      line-height: 20px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+}
+
+.navbar-nav > li > span{
+    display: inline-block;
+    padding: 6px 6px;
+    > a{
+       color:$white;
+       @media (max-width: 1000px){
+         //padding: 4px 7px;
+       }
+        padding: 4px 7px;
+       &:hover, &:focus {
+          background-color:$dark-blue;
+          border-radius: 10px;
+          text-decoration: none;
+    }
+  }
+}
+
+// SPLASH FLEX RULES
+.flex-splash{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  .flex-splash-text{
+    margin-top: 100px;
+    order: 0;
+    flex: 1 1 400px;
+    align-self: center;
+  }
+  .flex-splash-image{
+    order: 0;
+   flex: 1 1 auto;
+   align-self: center;
+   @media (max-width: 990px) {
+     display:none;
+   }
+  }
+}
+
+//SERVICE FLEX RULES
+.even-service.background-image{
+  background-image: url('../images/CreamTileBackground.jpg');
+  .service-section {
+    .service-descr .service-title{
+      color: $dark-blue;
+    }
+    .components .background-image{
+      background-color:$white;
+      .card .card-body h3{
+        color: $light-orange;
+      }
+    }
+  }
+}
+.odd-service .service-section {
+  flex-direction: row-reverse;
+  .service-descr .service-title{
+    color: $light-orange;
+  }
+  .components .background-image{
+    background-image: url('../images/CardTileBackground.jpg');
+    .card .card-body h3{
+      color: $dark-blue;
+    }
+  }
+}
+
+.service-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .service-descr{
+      order: 0;
+      flex: 1 1 auto;
+      max-width: 400px;
+      align-self: auto;
+    }
+    .components{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      flex-direction: row;
+      order: 0;
+      flex: 1 0 300px;
+      align-self: auto;
+      .component{
+        padding: 12px;
+        margin: 12px;
+        border-radius: 12px;
+        flex: 0 1 auto;
+        max-width: 300px;
+        .card{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .card-img{
+           flex: 0 0 auto;
+          }
+          .card-body{
+            flex: 1 1 200px;
+            max-height: 200px;
+          }
+        }
+      }
+    }
 }
 
 .scroll-menu {
@@ -44,11 +243,4 @@
   .footer-card{
     text-align: center;
   }
-}
-
-.card{
-  border: grey solid 2px;
-  text-align: center;
-  margin: 12px;
-  padding: 6px;
 }

@@ -5821,9 +5821,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-#header {
-  margin-top: 30px; }
-
 #footer {
   margin-top: 30px;
   border-top: 1px solid #eeeeee;
@@ -5835,8 +5832,150 @@ button.close {
   max-width: 100%;
   height: auto; }
 
-.navbar-brand img {
-  margin-top: -.5rem; }
+a, p, span, div, .standard-text {
+  font-family: co-headline, sans-serif;
+  font-style: normal;
+  font-weight: 300; }
+
+.bold-text, .navbar-nav > li > span > a {
+  font-family: co-headline, sans-serif;
+  font-style: normal;
+  font-weight: 400; }
+
+h1, h2, h3, h4 {
+  font-family: montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 700; }
+  h1.header-blue, h2.header-blue, h3.header-blue, h4.header-blue {
+    color: #034970; }
+  h1.header-green, h2.header-green, h3.header-green, h4.header-green {
+    color: #145753; }
+  h1.header-white, h2.header-white, h3.header-white, h4.header-white {
+    color: #ffffff; }
+  h1.header-orange, h2.header-orange, h3.header-orange, h4.header-orange {
+    color: #d05527; }
+
+.background-image {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  .background-image.splash-page {
+    background-image: url("../images/SplashCodingBackgroundLight.jpg"); }
+
+.inline-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  transform: scaleX(-1); }
+  .inline-image.splash-graphic {
+    height: 450px;
+    width: 500px;
+    background-image: url("../images/CloudServers.png"); }
+
+.hunter-navbar {
+  background-color: #c94b28;
+  background: linear-gradient(to right, rgba(208, 85, 39, 0.75), #c94b28 10%, #c94b28 90%, rgba(208, 85, 39, 0.75)); }
+
+.navbar-fixed-top {
+  min-height: 80px; }
+
+.navbar-nav > li > span > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 80px; }
+
+@media (max-width: 990px) {
+  .navbar-nav > li > span > a {
+    line-height: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px; } }
+
+.navbar-nav > li > span {
+  display: inline-block;
+  padding: 6px 6px; }
+  .navbar-nav > li > span > a {
+    color: #ffffff;
+    padding: 4px 7px; }
+    .navbar-nav > li > span > a:hover, .navbar-nav > li > span > a:focus {
+      background-color: #034970;
+      border-radius: 10px;
+      text-decoration: none; }
+
+.flex-splash {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  .flex-splash .flex-splash-text {
+    margin-top: 100px;
+    order: 0;
+    flex: 1 1 400px;
+    align-self: center; }
+  .flex-splash .flex-splash-image {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: center; }
+    @media (max-width: 990px) {
+      .flex-splash .flex-splash-image {
+        display: none; } }
+
+.even-service.background-image {
+  background-image: url("../images/CreamTileBackground.jpg"); }
+  .even-service.background-image .service-section .service-descr .service-title {
+    color: #034970; }
+  .even-service.background-image .service-section .components .background-image {
+    background-color: #ffffff; }
+    .even-service.background-image .service-section .components .background-image .card .card-body h3 {
+      color: #d78a3e; }
+
+.odd-service .service-section {
+  flex-direction: row-reverse; }
+  .odd-service .service-section .service-descr .service-title {
+    color: #d78a3e; }
+  .odd-service .service-section .components .background-image {
+    background-image: url("../images/CardTileBackground.jpg"); }
+    .odd-service .service-section .components .background-image .card .card-body h3 {
+      color: #034970; }
+
+.service-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  .service-section .service-descr {
+    order: 0;
+    flex: 1 1 auto;
+    max-width: 400px;
+    align-self: auto; }
+  .service-section .components {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    order: 0;
+    flex: 1 0 300px;
+    align-self: auto; }
+    .service-section .components .component {
+      padding: 12px;
+      margin: 12px;
+      border-radius: 12px;
+      flex: 0 1 auto;
+      max-width: 300px; }
+      .service-section .components .component .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .service-section .components .component .card .card-img {
+          flex: 0 0 auto; }
+        .service-section .components .component .card .card-body {
+          flex: 1 1 200px;
+          max-height: 200px; }
 
 .scroll-menu {
   display: flex;
@@ -5851,9 +5990,3 @@ button.close {
   background-color: #eeeeee; }
   .footer-container .footer-card {
     text-align: center; }
-
-.card {
-  border: grey solid 2px;
-  text-align: center;
-  margin: 12px;
-  padding: 6px; }

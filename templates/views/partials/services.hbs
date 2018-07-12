@@ -1,16 +1,6 @@
 {{!< default}}
-<div class="container">
-	<h1>Services</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	<hr>
-<h2>Service Offerings</h2>
-  <div class="row">
-    <div class="col-md-12 cold-lg-12">
-      {{# each data.services}}
-      <div class="row">
-				{{> service this}}
-      </div>
-      {{/each}}
-    </div>
-  </div>
+{{# each data.services}}
+<div class="service {{cycle @index 'even-service' 'odd-service'}} background-image">
+		{{> service this}}
 </div>
+{{/each}}
