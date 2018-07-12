@@ -37,15 +37,15 @@
 							<ul class="nav navbar-nav navbar-left">
 									{{# each navLinks}}
 									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-										<span><a href="{{ href }}">{{ label }}</a></span>
+										<span><a class="blue-button" href="{{ href }}">{{ label }}</a></span>
 									</li>
 								{{/each}}
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								{{#if user}}
-								<li><span><a class="bold-text"href="/keystone/signout">Sign Out</a></span></li>
+								<li><span><a class="bold-text blue-button"href="/keystone/signout">Sign Out</a></span></li>
 								{{else}}
-								<li><span><a class="bold-text" href="/keystone/signin">Sign In</a></span></li>
+								<li><span><a class="bold-text blue-button" href="/keystone/signin">Sign In</a></span></li>
 								{{/if}}
 							</ul>
 						</div>

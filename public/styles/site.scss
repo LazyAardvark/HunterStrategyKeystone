@@ -43,27 +43,26 @@ $white: #ffffff;
    font-family: co-headline, sans-serif;
    font-style: normal;
    font-weight: 400;
-
  }
 
 h1, h2, h3, h4 {
   font-family: montserrat, sans-serif;
   font-style:normal;
   font-weight: 700;
-
-  &.header-blue{
-    color: $dark-blue;
-  }
-  &.header-green{
-    color:$dark-green;
-  }
-  &.header-white{
-    color:$white;
-  }
-  &.header-orange{
-    color: $dark-orange;
-  }
 }
+.header-blue, .text-blue{
+  color: $dark-blue;
+}
+.header-green{
+  color:$dark-green;
+}
+.header-white, .text-white{
+  color:$white;
+}
+.header-orange{
+  color: $dark-orange;
+}
+
 
 #header{
   width:auto;
@@ -77,6 +76,9 @@ h1, h2, h3, h4 {
   background-position: center center;
   &.splash-page{
     background-image: url('../images/SplashCodingBackgroundLight.jpg');
+  }
+  &.news-section{
+    background-image: url('../images/SplashCodingBackgroundDark.jpg');
   }
 
 }
@@ -115,21 +117,52 @@ h1, h2, h3, h4 {
     }
 }
 
-.navbar-nav > li > span{
+.button, .navbar-nav > li > span{
     display: inline-block;
     padding: 6px 6px;
-    > a{
+    > a.blue-button{
        color:$white;
-       @media (max-width: 1000px){
-         //padding: 4px 7px;
-       }
         padding: 4px 7px;
        &:hover, &:focus {
           background-color:$dark-blue;
           border-radius: 10px;
-          text-decoration: none;
+            text-decoration: none;
+      }
+    }
+    > a.white-button{
+       background-color:$white;
+       border-radius: 10px;
+       font-weight: bold;
+       padding: 8px 8px;
+       &:hover, &:focus {
+        color:$dark-blue;
+        text-decoration: none;
+      }
+    }
+}
+//BASIC FLEX RULES
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  .flex-column{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .flex-item{
+      padding: 6px;
+      margin: 6px;
+      flex: 1 1 auto;
     }
   }
+
 }
 
 // SPLASH FLEX RULES
@@ -145,14 +178,18 @@ h1, h2, h3, h4 {
     order: 0;
     flex: 1 1 400px;
     align-self: center;
+    flex-direction: column;
+    display: flex;
   }
   .flex-splash-image{
+    flex-direction: column;
+    display: flex;
     order: 0;
-   flex: 1 1 auto;
-   align-self: center;
-   @media (max-width: 990px) {
-     display:none;
-   }
+    flex: 1 1 auto;
+    align-self: center;
+    @media (max-width: 990px) {
+      display:none;
+    }
   }
 }
 
@@ -208,7 +245,7 @@ h1, h2, h3, h4 {
       align-self: auto;
       .component{
         padding: 12px;
-        margin: 12px;
+        margin: 36px 12px 36px 12px;
         border-radius: 12px;
         flex: 0 1 auto;
         max-width: 300px;

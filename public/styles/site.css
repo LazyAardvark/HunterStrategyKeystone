@@ -5846,14 +5846,18 @@ h1, h2, h3, h4 {
   font-family: montserrat, sans-serif;
   font-style: normal;
   font-weight: 700; }
-  h1.header-blue, h2.header-blue, h3.header-blue, h4.header-blue {
-    color: #034970; }
-  h1.header-green, h2.header-green, h3.header-green, h4.header-green {
-    color: #145753; }
-  h1.header-white, h2.header-white, h3.header-white, h4.header-white {
-    color: #ffffff; }
-  h1.header-orange, h2.header-orange, h3.header-orange, h4.header-orange {
-    color: #d05527; }
+
+.header-blue, .text-blue {
+  color: #034970; }
+
+.header-green {
+  color: #145753; }
+
+.header-white, .text-white {
+  color: #ffffff; }
+
+.header-orange {
+  color: #d05527; }
 
 #header {
   width: auto; }
@@ -5865,6 +5869,8 @@ h1, h2, h3, h4 {
   background-position: center center; }
   .background-image.splash-page {
     background-image: url("../images/SplashCodingBackgroundLight.jpg"); }
+  .background-image.news-section {
+    background-image: url("../images/SplashCodingBackgroundDark.jpg"); }
 
 .inline-image {
   background-repeat: no-repeat;
@@ -5894,16 +5900,44 @@ h1, h2, h3, h4 {
     padding-top: 20px;
     padding-bottom: 10px; } }
 
-.navbar-nav > li > span {
+.button, .navbar-nav > li > span {
   display: inline-block;
   padding: 6px 6px; }
-  .navbar-nav > li > span > a {
+  .button > a.blue-button, .navbar-nav > li > span > a.blue-button {
     color: #ffffff;
     padding: 4px 7px; }
-    .navbar-nav > li > span > a:hover, .navbar-nav > li > span > a:focus {
+    .button > a.blue-button:hover, .button > a.blue-button:focus, .navbar-nav > li > span > a.blue-button:hover, .navbar-nav > li > span > a.blue-button:focus {
       background-color: #034970;
       border-radius: 10px;
       text-decoration: none; }
+  .button > a.white-button, .navbar-nav > li > span > a.white-button {
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 8px 8px; }
+    .button > a.white-button:hover, .button > a.white-button:focus, .navbar-nav > li > span > a.white-button:hover, .navbar-nav > li > span > a.white-button:focus {
+      color: #034970;
+      text-decoration: none; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  .flex-row .flex-column {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center; }
+    .flex-row .flex-column .flex-item {
+      padding: 6px;
+      margin: 6px;
+      flex: 1 1 auto; }
 
 .flex-splash {
   display: flex;
@@ -5916,8 +5950,12 @@ h1, h2, h3, h4 {
     margin-top: 100px;
     order: 0;
     flex: 1 1 400px;
-    align-self: center; }
+    align-self: center;
+    flex-direction: column;
+    display: flex; }
   .flex-splash .flex-splash-image {
+    flex-direction: column;
+    display: flex;
     order: 0;
     flex: 1 1 auto;
     align-self: center; }
@@ -5966,7 +6004,7 @@ h1, h2, h3, h4 {
     align-self: auto; }
     .service-section .components .component {
       padding: 12px;
-      margin: 12px;
+      margin: 36px 12px 36px 12px;
       border-radius: 12px;
       flex: 0 1 auto;
       max-width: 300px; }
