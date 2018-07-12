@@ -5855,6 +5855,9 @@ h1, h2, h3, h4 {
   h1.header-orange, h2.header-orange, h3.header-orange, h4.header-orange {
     color: #d05527; }
 
+#header {
+  width: auto; }
+
 .background-image {
   height: 100%;
   background-repeat: no-repeat;
