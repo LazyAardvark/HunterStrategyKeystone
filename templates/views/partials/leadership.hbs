@@ -1,14 +1,21 @@
-<div class="container">
-	<h1>Leadership</h1>
-	  <div class="row">
-	    <div class="col-md-12 cold-lg-12">
-	      <div class="row">
-	        {{# each staff}}
-	        <div class="col-md-4 col-lg-4">
-	          {{> staff this}}
-	        </div>
-	        {{/each}}
+<div class="flex-row">
+	<div class="container flex-column">
+		<h2 class="header-orange-light flex-item"><_Leadership_> + .competent & .professional</h2>
+		<p>
+		Ut enim ad minim veniam, ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<div class="flex-item">
+			<div class="flex-row">
+	      {{# each staff}}
+	      <div class="flex-row">
+	        {{> staff this}}
 	      </div>
-	    </div>
+	      {{/each}}
+		  </div>
+		</div>
+		<div class="flex-item">
+	    <span class="button "><a class="" href="">Contact Us</a></span>
+			<span class="button "><a class="" href="">Join the Hunter Strategy Team</a></span>
 	  </div>
+	</div>
 </div>

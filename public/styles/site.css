@@ -5859,6 +5859,9 @@ h1, h2, h3, h4 {
 .header-orange {
   color: #d05527; }
 
+.header-orange-light {
+  color: #d78a3e; }
+
 #header {
   width: auto; }
 
@@ -5935,9 +5938,26 @@ h1, h2, h3, h4 {
     align-content: center;
     align-items: center; }
     .flex-row .flex-column .flex-item {
+      text-align: center;
       padding: 6px;
       margin: 6px;
       flex: 1 1 auto; }
+
+.card.staff-card.flex-column .staff-title {
+  color: #5a5341; }
+
+.card.staff-card.flex-column .card-image img {
+  border-radius: 15px; }
+
+.card.staff-card.flex-column span .staff-icon {
+  font-size: 18px;
+  color: #dcd7cd; }
+
+.card.staff-card.flex-column .flex-item {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 0px;
+  padding-bottom: 0px; }
 
 .flex-splash {
   display: flex;

@@ -30,6 +30,7 @@ $dark-blue: #034970;
 $light-green: #5b8244;
 $dark-green: #145753;
 $dark-grey: #5a5341;
+$light-grey: #dcd7cd;
 $white: #ffffff;
 
 // FONT STYLE DEFINTIONS
@@ -61,6 +62,9 @@ h1, h2, h3, h4 {
 }
 .header-orange{
   color: $dark-orange;
+}
+.header-orange-light{
+  color: $light-orange;
 }
 
 
@@ -126,7 +130,7 @@ h1, h2, h3, h4 {
        &:hover, &:focus {
           background-color:$dark-blue;
           border-radius: 10px;
-            text-decoration: none;
+          text-decoration: none;
       }
     }
     > a.white-button{
@@ -157,12 +161,32 @@ h1, h2, h3, h4 {
     align-content: center;
     align-items: center;
     .flex-item{
+      text-align: center;
       padding: 6px;
       margin: 6px;
       flex: 1 1 auto;
     }
   }
+}
 
+//Leadership RULES
+.card.staff-card.flex-column {
+  .staff-title{
+    color: $dark-grey;
+  }
+  .card-image img{
+    border-radius: 15px;
+  }
+  span .staff-icon{
+    font-size:18px;
+    color: $light-grey;
+  }
+  .flex-item{
+    margin-top:3px;
+    margin-bottom:3px;
+    padding-top:0px;
+    padding-bottom:0px;
+  }
 }
 
 // SPLASH FLEX RULES

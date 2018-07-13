@@ -1,16 +1,12 @@
 {{!< default}}
 <div class="container">
-	<h1>Customers</h1>
+	<h2> &#60;Demonstrated_Excellence&#62; + &#60;Vast_Experience&#62; = [true]</h2>
 	<hr>
 	<div class="row">
-		<div class="col-md-12 cold-lg-12">
-			<div class="row">
-				{{# each customers}}
-					<div class="col-md-4 col-lg-4">
-						{{> customer this}}
-					</div>
-					{{/each}}
+		{{# each customers}}
+			<div class="col-md-4 col-lg-4">
+				{{> customer this}}
 			</div>
-		</div>
+			{{/each}}
 	</div>
 </div>

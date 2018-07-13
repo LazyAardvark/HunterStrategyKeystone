@@ -1,13 +1,14 @@
-<div class="card">
-  <img src={{{cloudinaryUrl image width=160 height=160 crop='fit' }}} alt="John" class="card-image">
-  <h3>{{name.first}} {{name.last}}</h3>
-  <p class="title">{{title}}</p>
-  <span><
-    <i class="far fa-envelope fa-2x"></i>
-    <i class="fab fa-linkedin fa-2x"></i>
-    <i class="fab fa-github fa-2x"></i>
-    <i class="fab fa-twitter-square fa-2x"></i>
-    <i class="fab fa-medium fa-2x"></i>
-    >
+<div class=" card staff-card flex-column">
+  <div class="card-image flex-item">
+    <img  src={{{cloudinaryUrl image width=225 height=225 crop='fit' }}} alt="John" >
+  </div>
+  <h3 class="flex-item">&#60;{{name.first}}_{{name.last}}&#62;</h3>
+  <p class="staff-title flex-item">_{{title}}_</p>
+  <span class="flex-item">
+    <i class="far fa-envelope staff-icon"></i>
+    <i class="fab fa-linkedin staff-icon"></i>
+    <i class="fab fa-github staff-icon"></i>
+    <i class="fab fa-twitter-square staff-icon"></i>
+    <i class="fab fa-medium staff-icon"></i>
   </span>
 </div>
