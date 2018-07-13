@@ -55,7 +55,7 @@ h1, h2, h3, h4 {
   color: $dark-blue;
 }
 .header-green{
-  color:$dark-green;
+  color:$light-green;
 }
 .header-white, .text-white{
   color:$white;
@@ -84,7 +84,12 @@ h1, h2, h3, h4 {
   &.news-section{
     background-image: url('../images/SplashCodingBackgroundDark.jpg');
   }
-
+  &.customer-tile{
+    background-image:  url('../images/CreamTileBackground.jpg');
+  }
+  &.even-service{
+    background-image: url('../images/CreamTileBackground.jpg');
+  }
 }
 .inline-image{
   background-repeat: no-repeat;

@@ -1,12 +1,21 @@
 {{!< default}}
-<div class="container">
-	<h2> &#60;Demonstrated_Excellence&#62; + &#60;Vast_Experience&#62; = [true]</h2>
-	<hr>
-	<div class="row">
-		{{# each customers}}
-			<div class="col-md-4 col-lg-4">
-				{{> customer this}}
+<div class="flex-row">
+	<div class="container flex-column">
+		<div class="flex-item">
+			<h2 class="header-green">&#60;Demonstrated_Excellence&#62; + &#60;Vast_Experience&#62; = [true]</h2>
+			<p>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet et dolore magna, quis nostrud exercitation pariatur. </p>
+		</div>
+		<div class="flex-item">
+			<div class="flex-row">
+			{{# each customers}}
+				<div class="flex-item">
+					{{> customer this}}
+				</div>
+				{{/each}}
 			</div>
-			{{/each}}
+		</div>
+		<div class="flex-item">
+			<span class="button "><a class="" href="">Read Case Studies</a></span>
+		</div>
 	</div>
 </div>

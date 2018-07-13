@@ -5851,7 +5851,7 @@ h1, h2, h3, h4 {
   color: #034970; }
 
 .header-green {
-  color: #145753; }
+  color: #5b8244; }
 
 .header-white, .text-white {
   color: #ffffff; }
@@ -5874,6 +5874,10 @@ h1, h2, h3, h4 {
     background-image: url("../images/SplashCodingBackgroundLight.jpg"); }
   .background-image.news-section {
     background-image: url("../images/SplashCodingBackgroundDark.jpg"); }
+  .background-image.customer-tile {
+    background-image: url("../images/CreamTileBackground.jpg"); }
+  .background-image.even-service {
+    background-image: url("../images/CreamTileBackground.jpg"); }
 
 .inline-image {
   background-repeat: no-repeat;

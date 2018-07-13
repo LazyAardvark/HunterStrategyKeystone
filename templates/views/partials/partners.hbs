@@ -1,13 +1,14 @@
 {{!< default}}
 <div class="flex-row">
 	<div class="container flex-column">
-		<h2>&#60;Valuable_Partners&#62; + &#60;Best_Practices&#62; = [true]</h2>
-		<p>Lorem ipsum dolor sit amet et dolore magna, quis nostrud exercitation  pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-		<hr>
+		<div class="flex-item">
+			<h2 class="header-blue">&#60;Valuable_Partners&#62; + &#60;Best_Practices&#62; = [true]</h2>
+			<p>Lorem ipsum dolor sit amet et dolore magna, quis nostrud exercitation  pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+		</div>
 	  <div class="flex-item">
 			<div class="flex-row">
       {{# each partners}}
-        <div class="">
+        <div class="flex-item">
 					{{> partner this}}
         </div>
       {{/each}}
