@@ -95,11 +95,97 @@ h1, h2, h3, h4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  transform: scaleX(-1);
+
   &.splash-graphic{
+    transform: scaleX(-1);
     height: 450px;
     width:500px;
     background-image: url('../images/CloudServers.png');
+  }
+}
+
+.darken::before {
+  background-color: #83aaa7;
+}
+
+/* The darkest duotone color */
+.lighten::after {
+  background-color: #084a6e;
+}
+
+/* Duotone effect */
+.duotone {
+  overflow: hidden;
+  display: inline-block;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+}
+
+.duotone::before, .duotone::after {
+  content: '';
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  transition: all .7s ease-in-out;
+}
+
+.duotone::before {
+  mix-blend-mode: multiply;
+}
+
+.duotone::after {
+  mix-blend-mode: screen;
+}
+
+/* Removal of duotone and sizing on hover/touch */
+.duotone:hover, .duotone:hover::before, .duotone:hover::after, .duotone:focus, .duotone:focus::before, .duotone:focus::after {
+  transform: scale(1);
+  background-color: rgba(255, 255, 255, 0);
+}
+//Rules for news newsfeed
+.news.flex-column{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  .flex-row{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .flex-item{
+      height: 300px;
+      width: 300px;
+    }
+  }
+}
+@media (max-width: 618px) {
+    .news.flex-column{
+      display: none;
+    }
+}
+@media (min-width: 1208px) {
+    .news.flex-column .flex-row .flex-item{
+    flex: 1 1 auto;
+    }
+}
+
+
+.news-container{
+  position: relative;
+  .news-content{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 10;
   }
 }
 
@@ -153,7 +239,7 @@ h1, h2, h3, h4 {
 .flex-row{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -161,7 +247,7 @@ h1, h2, h3, h4 {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -291,6 +377,11 @@ h1, h2, h3, h4 {
           }
         }
       }
+    }
+}
+@media (max-width: 618px) {
+    .service-section .components{
+      flex-wrap: wrap;
     }
 }
 

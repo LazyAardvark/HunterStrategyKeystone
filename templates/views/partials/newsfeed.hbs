@@ -1,0 +1,15 @@
+<div class="background-image news-section flex-row">
+	<div class="container flex-column">
+		<h2 class="header-white flex-item">What's New at Hunter Strategy?</h2>
+		<p class="text-white bold-text flex-item">Occatus, consedi ssinust autem ipsant quamus moluptur? Quibus voluptatiis elit quid maximodi suntiosam que omnis endis alitati dis.</p>
+		<span class="button flex-item"><a class="white-button" href="/news">View all News</a></span>
+		<div class="flex-item spacer"></div>
+	</div>
+</div>
+<div class="news flex-column">
+	<div class="flex-row">
+	  {{# each posts}}
+	      {{> newsfeedPost this}}
+	  {{/each}}
+	</div>
+</div>

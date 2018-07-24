@@ -23,6 +23,7 @@ exports = module.exports = function (req, res) {
 	view.query('jobs', keystone.list('Job').model.find());
 	view.query('customers', keystone.list('Customer').model.find());
 	view.query('partners', keystone.list('Partner').model.find());
+	view.query('posts', keystone.list('Post').model.find().sort({'publishedDate': -1}).limit(4));
 
 	// Load other posts
 	view.on('init', function (next) {
