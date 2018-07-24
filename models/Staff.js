@@ -18,6 +18,7 @@ Staff.add({
   title: {type: String},
   titleAbbreviated: {type: String},
   image: { type: Types.CloudinaryImage },
+  backgroundColor: {type: Types.Select , options: 'blue, orange, green, yellow', required:true, default: "blue"},
   contact: {
 		email: { type: Types.Email, displayGravitar: false },
     linkedIn:{ type: Types.Url},

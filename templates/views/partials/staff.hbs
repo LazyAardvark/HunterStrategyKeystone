@@ -1,8 +1,10 @@
 <div class=" card staff-card flex-column">
-  <div class="card-image flex-item">
-    <img  src={{{cloudinaryUrl image width=225 height=225 crop='fit' }}} alt="John" >
+  <div class="card-image flex-item ">
+    <div class="inline-image {{{backgroundColor}}}">
+      <img  src={{{cloudinaryUrl image width=225 height=225 crop='fit' }}} alt="John" >
+    </div>
   </div>
-  <h3 class="flex-item">&#60;{{name.first}}_{{name.last}}&#62;</h3>
+  <h4 class="flex-item">&#60;{{name.first}}_{{name.last}}&#62;</h4>
   <p class="staff-title flex-item">_{{title}}_</p>
   <span class="flex-item">
     <i class="far fa-envelope staff-icon"></i>

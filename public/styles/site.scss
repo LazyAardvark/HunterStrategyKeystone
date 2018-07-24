@@ -102,6 +102,18 @@ h1, h2, h3, h4 {
     width:500px;
     background-image: url('../images/CloudServers.png');
   }
+ &.blue{
+   background-image:url('../images/bio-backgrounds/BlueBioBackground.png');
+ }
+ &.green{
+   background-image: url('../images/bio-backgrounds/GreenBioBackground.png');
+ }
+ &.orange{
+   background-image: url('../images/bio-backgrounds/OrangeBioBackground.png');
+ }
+ &.yellow{
+   background-image: url('../images/bio-backgrounds/YellowBioBackground.png');
+ }
 }
 
 .darken::before {
@@ -215,7 +227,7 @@ h1, h2, h3, h4 {
 .button, .navbar-nav > li > span{
     display: inline-block;
     padding: 6px 6px;
-    > a.blue-button{
+    > a.blue-nav-button{
        color:$white;
         padding: 4px 7px;
        &:hover, &:focus {
@@ -234,6 +246,27 @@ h1, h2, h3, h4 {
         text-decoration: none;
       }
     }
+  > a.orange-button{
+    padding: 8px 8px;
+    color:$white;
+    border-radius: 15px;
+    font-weight: bold;
+    background: linear-gradient(to right, $darker-orange, $light-orange);
+  }
+  > a.blue-button{
+    padding: 8px 8px;
+    color:$white;
+    border-radius: 15px;
+    font-weight: bold;
+    background: $dark-blue;
+  }
+  > a.green-button{
+    padding: 8px 8px;
+    color:$white;
+    border-radius: 15px;
+    font-weight: bold;
+    background: linear-gradient(to right, $light-green, $dark-green);
+  }
 }
 //BASIC FLEX RULES
 .flex-row{
@@ -242,7 +275,7 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  align-items: center;
+  align-items: stretch;
   .flex-column{
     flex: 1 1 auto;
     display: flex;
@@ -250,7 +283,7 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    align-items: center;
+    align-items: stretch;
     .flex-item{
       text-align: center;
       padding: 6px;
@@ -262,11 +295,15 @@ h1, h2, h3, h4 {
 
 //Leadership RULES
 .card.staff-card.flex-column {
+    align-items: center;
   .staff-title{
     color: $dark-grey;
   }
-  .card-image img{
+  .card-image .inline-image{
     border-radius: 15px;
+    img{
+      border-radius: 15px;
+    }
   }
   span .staff-icon{
     font-size:18px;
