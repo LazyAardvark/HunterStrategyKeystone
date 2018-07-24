@@ -155,6 +155,20 @@ h1, h2, h3, h4 {
   transform: scale(1);
   background-color: rgba(255, 255, 255, 0);
 }
+
+/* greyscale effect */
+.greyscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(100%);
+   transition: all .7s ease-in-out;
+}
+
+/* Removal of greyscale and sizing on hover/touch */
+.greyscale:hover, .greyscale:hover::before, .greyscale:hover::after, .greyscale:focus, .greyscale:focus::before, .greyscale:focus::after {
+  filter: none;
+  -webkit-filter: none;
+}
+
 //Rules for news newsfeed
 .news.flex-column{
   display: flex;
@@ -290,6 +304,12 @@ h1, h2, h3, h4 {
       margin: 6px;
       flex: 1 1 auto;
     }
+  }
+}
+.customers.flex-row, .partners.flex-row{
+  align-items: center;
+  .flex-column{
+    align-items: center;
   }
 }
 
