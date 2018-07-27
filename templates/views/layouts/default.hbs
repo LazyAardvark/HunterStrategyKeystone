@@ -27,26 +27,22 @@
 				<div role="navigation" class="navbar hunter-navbar  navbar-fixed-top">
 					<div class="container">
 						<div class="navbar-header">
-							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+							<div type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
 								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-							</button>
-							<a href="/" class="navbar-brand"><img src="/images/HS-logo-white.png" width="300"></a>
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-square fa-stack-2x text-blue"></i>
+								<i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+							</span>
+						</div>
+							<a class="navbar-brand" href="/"><img src="/images/HS-logo-white.png" width="300"></a>
 						</div>
 						<div class="collapse navbar-collapse">
-							<ul class="nav navbar-nav navbar-left">
+							<ul class="nav navbar-nav ">
 									{{# each navLinks}}
 									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-										<span><a class="blue-nav-button" href="{{ href }}">{{ label }}</a></span>
+										<span><a data-toggle="collapse" data-target=".navbar-collapse" class="blue-nav-button" href="{{ href }}">{{ label }}</a></span>
 									</li>
 								{{/each}}
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								{{#if user}}
-								<li><span><a class="bold-text blue-nav-button"href="/keystone/signout">Sign Out</a></span></li>
-								{{else}}
-								<li><span><a class="bold-text blue-nav-button" href="/keystone/signin">Sign In</a></span></li>
-								{{/if}}
 							</ul>
 						</div>
 					</div>
@@ -85,26 +81,26 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div class="footer-container">
-			<div class="row " id="footer">
-				<div class="col-md-4 footer-card">
-					<h4>Contact Information</h4>
-					<span>admin@hunterstrategy.net</span>
-					<br />
-					<span>(202) 417-7764</span>
-					<br />
-					<span>Social media links</span>
-				</div>
-				<div class="col-md-4 footer-card">
-					<h4>Address Information and maybe a google map</h4>
-					<p>3711 Macomb Street Northwest, Office 3B, Washington, DC, 20016</p>
-				</div>
-				<div class="col-md-4 footer-card">
-					<h4>Logos </h4>
-					<img src="/favicon.ico" width="60">
-				</div>
-				<div class="col-md-12 footer-card">
-					<p>Hunter Strategy's Website is powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
+		<div>
+			<div class="background-image footer-container">
+				<div class="container footer-column">
+					<div class="footer-row">
+						<div class="footer-item">
+							<a href="/"><img src="/images/HS-logo-white.png" width="300"></a>
+						</div>
+						<div class="footer-item text-white bold-text">
+							</br>
+							<p>3711 Macomb Street Northwest, Office 3B, Washington, DC, 20016</p>
+							<p><span>(202) 417-7764</span> | <span>admin@hunterstrategy.net</span></p>
+						</div>
+						<div class="footer-item">
+	            <a class="far fa-envelope fa-2x footer-icon text-white"></a>
+	            <a class="fab fa-linkedin fa-2x footer-icon text-white"></a>
+	            <a class="fab fa-github fa-2x footer-icon text-white"></a>
+	            <a class="fab fa-twitter-square fa-2x footer-icon text-white"></a>
+	            <a class="fab fa-medium fa-2x footer-icon text-white"></a>
+	          </div>
+					</div>
 				</div>
 			</div>
 		</div>

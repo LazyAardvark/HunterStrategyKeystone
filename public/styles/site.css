@@ -5872,7 +5872,7 @@ h1, h2, h3, h4 {
   background-position: center center; }
   .background-image.splash-page {
     background-image: url("../images/SplashCodingBackgroundLight.jpg"); }
-  .background-image.news-section {
+  .background-image.news-section, .background-image.footer-container {
     background-image: url("../images/SplashCodingBackgroundDark.jpg"); }
   .background-image.customer-tile {
     background-image: url("../images/CreamTileBackground.jpg"); }
@@ -5973,15 +5973,19 @@ h1, h2, h3, h4 {
   position: relative; }
   .news-container .news-content {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 200px;
     padding-left: 20px;
     padding-right: 20px;
     z-index: 10; }
 
 .hunter-navbar {
   background-color: #c94b28;
-  background: linear-gradient(to right, rgba(208, 85, 39, 0.75), #c94b28 10%, #c94b28 90%, rgba(208, 85, 39, 0.75)); }
+  background: linear-gradient(to right, #d05527, #c94b28 10%, #c94b28 90%, #d05527);
+  font-size: 1.5rem; }
+
+.navbar-brand {
+  height: auto; }
 
 .navbar-fixed-top {
   min-height: 80px; }
@@ -5995,7 +5999,8 @@ h1, h2, h3, h4 {
   .navbar-nav > li > span > a {
     line-height: 20px;
     padding-top: 20px;
-    padding-bottom: 10px; } }
+    padding-bottom: 10px;
+    font-size: 2rem; } }
 
 .button, .navbar-nav > li > span {
   display: inline-block;
@@ -6169,7 +6174,34 @@ h1, h2, h3, h4 {
     .scroll-menu .scroll-menu-item .card {
       width: 40rem; }
 
-.footer-container {
-  background-color: #eeeeee; }
-  .footer-container .footer-card {
-    text-align: center; }
+.footer-container .footer-card {
+  text-align: center; }
+
+.footer-container .footer-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  .footer-container .footer-column .footer-row {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center; }
+    .footer-container .footer-column .footer-row .footer-item {
+      text-align: center;
+      padding: 6px;
+      margin: 6px;
+      flex: 1 1 auto; }
+
+.footer-icon {
+  margin: 2px; }
+
+/* Removal of duotone and sizing on hover/touch */
+.footer-icon:hover, .footer-icon:hover::before, .footer-icon:hover::after,
+.footer-icon:focus, .footer-icon:focus::before, .footer-icon:focus::after {
+  text-decoration: none;
+  cursor: pointer; }
