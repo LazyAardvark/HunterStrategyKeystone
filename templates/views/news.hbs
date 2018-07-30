@@ -1,33 +1,53 @@
-<div class="container">
-	<h1>News</h1>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
-			<div class="news">
-				{{# each data.posts.results}}
-				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</p>
-					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-					<p>{{{content.brief}}}</p>
-					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
-				</div>
-				{{/each}}
-			</div>
-		</div>
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
-				<a href="/news" class="active list-group-item">All Categories</a>
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
-				{{/each}}
+<div class="background-image news-tile news-spacer">
+	<div class="flex-row">
+		<div class="flex-column">
+			<div class="flex-item">
+				<h1 class="header-blue">News</h1>
+				<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
 			</div>
 		</div>
 	</div>
-	{{>pagination}}
+	<div class="news-body">
+			<div class="flex-row">
+				<div class="news flex-item">
+					<div class="news-card-deck">
+						{{# each data.posts.results}}
+				    <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="card news-post">
+				      <div class="news-flex-row">
+				        <div class="news-flex-info">
+				          <div class="card-block">
+				            <h3 class="header-blue card-title"><a class="header-blue" href="{{postUrl slug}}">{{{title}}}</a></h3>
+										<div><span class="bold-text">{{date publishedDate }}</span></div>
+										<p class="">{{{categoryList categories prefix="Posted in "}}}
+												{{#if author.name.first}}by {{author.name.first}}{{/if}}</p>
+										<p class="">{{{content.brief}}}</p>
+				          </div>
+									<div class="card-button">
+										{{#if content.extended}}<span class="button"><a class="orange-button" href="{{postUrl slug}}">Read more.</a></span>{{/if}}
+									</div>
+				        </div>
+				        <div class="news-flex-picture">
+				          	{{#if image}}<div class="news-picture background-image" style="background-image: url({{{cloudinaryUrl image width='350' height='350'}}})"></div>{{/if}}
+				        </div>
+				      </div>
+				    </div>
+						{{/each}}
+				  </div>
+				</div>
+				{{>pagination}}
+			</div>
+		</div>
+		<div class="news-nav">
+			<div class="flex-row">
+				<div class="categories flex-item">
+					<h2 class="center-text">Categories</h2>
+					<div class="list-group">
+						<a href="/news" class="active list-group-item">All Categories</a>
+						{{# each data.categories }}
+						<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+					{{/each}}
+					</div>
+			</div>
+		</div>
+	</div>
 </div>

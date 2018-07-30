@@ -45,6 +45,9 @@ $white: #ffffff;
    font-style: normal;
    font-weight: 400;
  }
+ .center-text{
+   text-align: center;
+ }
 
 h1, h2, h3, h4 {
   font-family: montserrat, sans-serif;
@@ -72,6 +75,10 @@ h1, h2, h3, h4 {
   width:auto;
 }
 
+#body{
+  margin-top:92px;
+}
+
 // BASIC IMAGE DEFINTIONS
 .background-image{
   height:100%;
@@ -84,7 +91,7 @@ h1, h2, h3, h4 {
   &.news-section, &.footer-container{
     background-image: url('../images/SplashCodingBackgroundDark.jpg');
   }
-  &.customer-tile{
+  &.customer-tile, &.news-tile{
     background-image:  url('../images/CreamTileBackground.jpg');
   }
   &.even-service{
@@ -352,7 +359,6 @@ h1, h2, h3, h4 {
   align-content: center;
   align-items: center;
   .flex-splash-text{
-    margin-top: 100px;
     order: 0;
     flex: 1 1 400px;
     align-self: center;
@@ -364,11 +370,18 @@ h1, h2, h3, h4 {
     display: flex;
     order: 0;
     flex: 1 1 auto;
-    align-self: center;
+    align-self: flex-end;
     @media (max-width: 990px) {
       display:none;
     }
   }
+}
+
+//Rules for splash splash-page
+.splash-text{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 14px;
 }
 
 //SERVICE FLEX RULES
@@ -497,3 +510,55 @@ h1, h2, h3, h4 {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+// NEWS Page and cards
+.news-spacer{
+  margin-top:90px;
+}
+.news-post{
+    background: $white;
+    margin:24px;
+    padding:12px;
+    border-radius:15px;
+}
+
+//BASIC NEWS FLEX RULES
+.news-body{
+  display: flex;
+  flex: 1;
+}
+.news-card-deck{
+  display: flex;
+  flex-flow: wrap ;
+}
+.news-post{
+  display: flex;
+  //box-shadow:  12px 5px 25px;
+}
+.news-flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.news-flex-column{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+  .news-flex-info{
+    align-self: center;
+    width: 300px;
+    flex: 0 1 250px;
+  }
+  .news-flex-picture{
+    flex: 0 1 225px;
+    margin-top: -12px;
+    margin-bottom:  -12px;
+    margin-right: -62px;
+     .news-picture{
+       border-top-right-radius: 15px;
+       border-bottom-right-radius: 15px;
+       height: 300px;
+       width: 225px;
+    }
+  }

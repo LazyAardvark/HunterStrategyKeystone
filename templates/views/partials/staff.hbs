@@ -5,12 +5,20 @@
     </div>
   </div>
   <h4 class="flex-item">&#60;{{name.first}}_{{name.last}}&#62;</h4>
-  <p class="staff-title flex-item">_{{title}}_</p>
+  <span class="staff-title flex-item">_{{title}}_</span>
+  <span class="staff-title flex-item">{{contact.email}}</span>
   <span class="flex-item">
-    <a href"/"><i class="far fa-envelope staff-icon"></i></a>
-    <a><i class="fab fa-linkedin staff-icon"></i></a>
-    <a><i class="fab fa-github staff-icon"></i></a>
-    <a><i class="fab fa-twitter-square staff-icon"></i></a>
-    <a><i class="fab fa-medium staff-icon"></i></a>
+    {{#if contact.linkedIn}}
+      <a href="{{contact.linkedIn}}"><i class="fab fa-linkedin staff-icon"></i></a>
+    {{/if}}
+    {{#if contact.twitter}}
+      <a href="{{contact.twitter}}"><i class="fab fa-github staff-icon"></i></a>
+    {{/if}}
+    {{#if contact.github}}
+      <a href="{{contact.github}}"><i class="fab fa-twitter-square staff-icon"></i></a>
+    {{/if}}
+    {{#if contact.medium}}
+      <a href="{{contact.medium}}"><i class="fab fa-medium staff-icon"></i></a>
+    {{/if}}
   </span>
 </div>
