@@ -6215,25 +6215,43 @@ h1, h2, h3, h4 {
   text-decoration: none;
   cursor: pointer; }
 
-.news-spacer {
-  margin-top: 90px; }
-
-.news-post {
+.news-post, .post-card {
   background: #ffffff;
   margin: 24px;
   padding: 12px;
-  border-radius: 15px; }
+  border-radius: 15px;
+  box-shadow: 5px 5px 18px; }
 
-.news-body {
+.news-post {
+  display: flex; }
+
+.news, .post {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.news-body, .post-body {
   display: flex;
   flex: 1; }
+
+.news-content, .post-content {
+  flex: 1; }
+
+.news-nav {
+  flex: 0 0 12em;
+  display: none; }
+
+.post-article {
+  margin: 16px; }
+
+/* if screen size gets wider than 860 */
+@media screen and (min-width: 860px) {
+  .news-nav {
+    display: flex; } }
 
 .news-card-deck {
   display: flex;
   flex-flow: wrap; }
-
-.news-post {
-  display: flex; }
 
 .news-flex-row {
   display: flex;
